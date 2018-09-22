@@ -1,0 +1,100 @@
+/*styling for the whole body*/
+*{
+  padding: 0px; margin: 0px; box-sizing: border-box; text-decoration: none;
+}
+
+/*font styling reference*/
+h1 { font-family: "Josefin Sans"; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 23px; }
+h3 { font-family: "Josefin Sans"; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+h4 { font-family: "Josefin Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+p { font-family: "Josefin Sans"; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+blockquote { font-family: "Josefin Sans"; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+pre { font-family: "Josefin Sans"; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+
+
+html, body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*styling for the header*/
+header{
+  padding:1% 2% 0% 2%;
+  display: block;
+  text-align: left;
+
+}
+
+
+/*styling for the top left logo*/
+
+a.logo{
+  opacity: 0.4;
+  transition: opacity 1s;
+  display:inline-block;
+  width:28%;
+
+
+}
+a.logo:hover{
+  opacity:1;
+}
+
+/*nav bar*/
+nav{
+  display: inline-block;
+  text-decoration: none;
+  text-align: right;
+  width: 68%;
+
+}
+
+
+nav li{
+  display: inline-block;
+  margin:0% 4%;
+  list-style-type: none;
+  font-size: 20px;
+
+}
+/*here it styles the current tab*/
+.current-nav-tab a{
+  font-weight: 400;
+  text-decoration: none;
+  color: #000000;
+  background-color: rgba(247,249,249,0.4);
+}
+
+
+
+/*here it means the rest*/
+.other-nav-tab > a{
+  font-weight: 300;
+  text-decoration: none;
+  color: rgba(62, 68, 67, 0.85);
+  transition:  0.5s ease-in;
+}
+
+.other-nav-tab > a:hover{
+  background-color: rgba(247,249,249,1);
+}
+
+
+/*main area*/
+main{
+  padding: 1% 2% 1% 2%;
+  background: rgba(247,249,249,0.4);
+}
+
+.project-block{
+  display: inline-block;
+}
+
+
+footer{
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+  background-color: white;
+  bottom:0;
+}
