@@ -7,7 +7,8 @@
 h1 { font-family: "Josefin Sans"; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 23px; }
 h2 {font-family: "Josefin Sans"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px;}
 h3 { font-family: "Josefin Sans"; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
-h4 { font-family: "Josefin Sans"; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+h4 { font-family: "Josefin Sans"; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; }
+h5 { font-family: "Josefin Sans"; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 p { font-family: "Josefin Sans"; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 blockquote { font-family: "Josefin Sans"; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
 pre { font-family: "Josefin Sans"; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
@@ -90,9 +91,7 @@ main{
 
 
 
-.project-block{
-  display: inline-block;
-}
+
 
 /*flex-box in main*/
 
@@ -100,6 +99,7 @@ main{
   display:flex;
   flex-wrap:wrap;
   padding:4px;
+  justify-content: center;
 }
 
 .flex-column{
@@ -116,6 +116,38 @@ main{
 
 .flex-column img:hover{
   opacity: 1;
+}
+
+
+main > a{
+  text-decoration: none;
+  color: rgba(62, 68, 67, 0.7);
+  transition:  0.5s ease-in;
+}
+
+main > a:hover{
+  color: rgba(184, 219, 41, 0.69);
+}
+
+.project-box{
+  display:inline-block;
+  position: relative;
+  text-align: right;
+  width:30%;
+  opacity: 0.5;
+}
+
+.project-namebox{
+  position:absolute;
+  bottom:3%;
+  top: 80%;
+  left: 50%;
+  display:inline-block;
+}
+
+.project-namebox, h3, h5{
+  text-decoration: none;
+  color: rgb(250, 241, 241);
 }
 
 /*footer area*/
