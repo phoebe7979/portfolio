@@ -74,7 +74,7 @@ nav li{
   font-weight: 300;
   text-decoration: none;
   color: rgba(62, 68, 67, 0.85);
-  transition:  0.5s ease-in;
+  transition:  0.3s ease-in;
 }
 
 .other-nav-tab > a:hover{
@@ -129,20 +129,24 @@ main > a:hover{
   color: rgba(184, 219, 41, 0.69);
 }
 
+
+
+/*projects in main*/
 .project-box{
-  display:inline-block;
-  position: relative;
-  text-align: right;
   width:30%;
+  height:20%;
+  background-image: url(../imgs/synology2018-front-450x300.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: bottom;
   opacity: 0.5;
 }
 
 .project-namebox{
-  position:absolute;
-  bottom:3%;
-  top: 80%;
-  left: 50%;
   display:inline-block;
+  position: relative;
+  text-align: center;
 }
 
 .project-namebox, h3, h5{
