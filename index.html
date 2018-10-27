@@ -4,11 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="imgs/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="imgs/favicon-32x32.png" sizes="32x32" />
+  <!--css -->
   <link rel="stylesheet" type="text/css" href="css/html5reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Yi-Chun Chen | Projects</title>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
 </head>
 
 
@@ -16,37 +21,55 @@
 
 <!--header includes logo and navigation bar, the default tab is projects-->
 <header>
-  <a class="logo" href="index.html"><img src="imgs/logo-170x90.svg" alt="logo image" title="yi-chun chen"></a>
-  <nav>
-    <ul>
+  <nav class="topnav" id="nav-tabs">
+      <a class="logo" href="index.html"><img src="imgs/logo-170x90.svg" alt="logo image" title="yi-chun chen"></a>
+      <a href = "javascript:void(0);" class = "nav-icon" onclick="navIconClick()"><i class="fas fa-bars" aria-label="navigation menu"></i></a>
       <li class="current-nav-tab"><a href="index.html">Projects</a></li>
       <li class="other-nav-tab"><a href="graphics.html">Graphics</a></li>
       <li class="other-nav-tab"><a href="more.html">...and More</a></li>
       <li class="other-nav-tab"><a href="about.html">About</a></li>
-    </ul>
   </nav>
 
 </header>
 
 <!-- main content -->
 <main>
-<h1>Projects</h1>
-<p>Selected UX, marketing, and cognitive linguistics projects</p>
-<br>
+<button class = "current-section" id = "ux-section"><h1>UX</h1></button>
+<h1 class = "section-divide">|</h1>
+<button class = "other-section" id = "marketing-section"><h1>Marketing</h1></button>
+<h1 class = "section-divide">|</h1>
+<button class = "other-section" id = "psycholinguistics-secion"><h1>Psycholinguistics</h1></button>
+<p class = "current-info" id = "ux-info">Selected UX research & design projects.</p>
+<p class = "other-info" id = "marketing-info">Selected event experience design and campaign strategies.</p>
+<p class = "other-info" id = "psycholinguistics-info">Selected research projects on psycholinguistics.</p>
 <br>
 
+
 <!-- project rows-->
-<div class="flex-row">
+
+<div class="experience flex-row">
 <!--each projects-->
   <a href="synology2018.html">
     <div class="project-box">
         <div class="project-namebox">
           <h3>Synology 2018 Sydney</h3>
-          <h5>Event experience design</h5>
+          <p>Event experience design</p>
         </div>
     </div>
   </a>
 <!-- end of first project-->
+
+<!--each projects-->
+  <a href="synology2018.html">
+    <div class="project-box">
+        <div class="project-namebox">
+          <h3>Synology 2018 Sydney</h3>
+          <p>Event experience design</p>
+        </div>
+    </div>
+  </a>
+<!-- end of first project-->
+
 <!--end of project rows-->
 </div>
 </main>
@@ -65,5 +88,6 @@
   <a href = "https://www.facebook.com/chenyichun7979" aria-label="link to facebook" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
 </footer>
 
+<script src="scripts/main.js"></script>
 </body>
 </html>
