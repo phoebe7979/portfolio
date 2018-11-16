@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Challenges</title>
+    <style>
+    #emailfield {
+    	display: none;
+    }   
+    </style>
+
+<!--     COLLEEN - MAKE SURE TO INCLUDE THIS LINE
+ -->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <h1>Challenge One</h1>
+    <form action="challenge2.html">
+      <fieldset>
+        <legend>Email subscriptions</legend>
+        <div id="check">
+          <label>
+            <!-- COLLEEN - I got rid of the event -->
+            <input type="checkbox" name="subscribe" id="subscribe">
+            Check to toggle the email field.
+          </label>
+        </div>
+
+        <div id="emailfield">
+          <label>
+            Email Address: 
+            <input type="text" name="email" id="email">
+          </label>
+        </div>
+
+        <input type = "submit" value = "Go To Challenge 2">
+      </fieldset>
+    </form>
+
+<!-- COLLEEN - Listen to the element with the id of 'subscribe'
+The toggle can take slow or fast. -->
+    <script>
+      $( "#subscribe" ).click(function() {
+          $( "#emailfield" ).toggle("slow");
+      });
+    </script>
+  </body>
+</html>

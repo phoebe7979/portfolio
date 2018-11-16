@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge Two</title>
+  <!-- COLLEEN - Don't forget this line -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+    <h1>Challenge Two</h1>
+    <form action="challenge3.html">
+      <fieldset>
+        <legend>Billing Information</legend>
+        <div>
+          <label for ="billing">Billing Address:</label><br>
+          <textarea name="billingAdd" id="billing"></textarea>
+          </label>
+        </div>
+
+        <div>
+          <label for ="home">Home Address:</label><br>
+          <input type="checkbox" name="useBilling" id="useBilling"> Same as above
+          </label>
+        <br>
+        <textarea name="homeAdd" id="home"></textarea>
+        </div>
+        <input type = "submit" value = "Go To Challenge 3">
+      </fieldset>
+
+      <script>
+        $( "#useBilling" ).click(function() {
+          // COLLEEN - This is new, we are using the prop and val attributes now.  These are the types of thinng that Google is invaluable for.
+            if ($( "#useBilling").prop('checked')){
+              // console.log($("#billing").val())
+              $( "#home").val($("#billing").val())
+              $( "#home").prop('disabled',true)
+            }
+           else{
+              $( "#home").val("")
+              $( "#home").prop('disabled',false)
+              }
+        });
+    </script>
+</body>
+</html>
