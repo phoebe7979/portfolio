@@ -33,13 +33,13 @@
         $( "#useBilling" ).click(function() {
           // COLLEEN - This is new, we are using the prop and val attributes now.  These are the types of thinng that Google is invaluable for.
             if ($( "#useBilling").prop('checked')){
-              // console.log($("#billing").val())
+              console.log($("#billing").val())
               $( "#home").val($("#billing").val())
               $( "#home").prop('disabled',true)
             }
            else{
               $( "#home").val("")
-              $( "#home").prop('disabled',false)
+              ( "#home").prop('disabled',false)
               }
         });
     </script>

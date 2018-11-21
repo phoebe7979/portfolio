@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 4</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+    /*COLLEEN - I added a new class here to hid the paragraphs initially.  And I toggled the display of errormsg.*/
+    p{
+        display: none;
+    }
+
+    .errormsg { 
+    	color:red;
+    	display:block; 
+    } 
+
+    </style>
+</head>
+<body>
+    <h1>Challenge 4</h1>
+	<form action="challenge5.html">
+        <fieldset>
+        <legend>Personal details</legend>
+          <label for="fullname">Full name: </label>
+            <input type="text" name="fullname" id="fullname">
+            <p id="nameerrormsg">Please enter your name above!</p>
+
+          <label for ="streetaddr">Street Address:</label>
+            
+            <input type="text" name="streetaddr" id="streetaddr">
+       
+            <p id="addrerrormsg">Please enter your street address!</p>
+        </fieldset>
+        <input type="submit" value="Submit it!"> 
+    </form>
+
+    <script>
+
+    $("form").submit(function() {
+        var valid = true;
+        // COLLEEN - Loop through each element of text input type
+        $("form input[type=text]").each(function() {
+            if(!(this.value)) {
+                // COLLEEN - I found an empty one, lets remember this for later.
+                valid=false;
+                // COLLEEN - Find the next paragraph after this element and change its class.
+                $(this).next('p').addClass('errormsg');
+    
+            }
+            else{
+                // COLLEEN - Don't forget to change it back if the text is there. 
+                 $(this).next('p').removeClass('errormsg');
+            }
+        });
+
+        // COLLEEN - Did I find an empty field above?  Make sure to keep the form from submitting.
+        if (valid == false){
+            event.preventDefault();
+            return false;
+        }
+    });
+
+    </script>
+</body>
+</html>

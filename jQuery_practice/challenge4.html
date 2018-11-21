@@ -5,50 +5,73 @@
 	<title>Challenge 4</title>
     <style>
 
-    .errormsg { 
+    .errormsg {
     	color:red;
     	/*font: Use a Google font*/
-    	display:none; } 
+    	display:none; }
     </style>
-    
-    <script type="text/javascript">
-    function checkForm(){
-    	var a = document.getElementById("fullname")
-    	var b = document.getElementById("streetaddr")
-    	if (a.value.length == 0)
-    		{
-                document.getElementById("nameerrormsg").style.display = "block"; a = 0;}
-    	   else {
-                document.getElementById("nameerrormsg").style.display = "none";}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    	if (b.value.length == 0)
-    		{document.getElementById("addrerrormsg").style.display = "block"; b = 0}
-    	else {document.getElementById("addrerrormsg").style.display = "none"; }
+		<script>
+		$(document).ready(function(){
+			$('form').submit(function(){
+				var validate = true;
+				$('form input[type=text]').each(function(){
+					if ($(this).val().length == 0){
+						alert('fill both blocks');
+						validate = false;
+						$(this).next('.errormsg').show();
+					}else{
+						$(this).next('.errormsg').hide();
+					}
+				})
+			if (validate == false){
+				return false;
+			}
 
-        if (b == 0 || a == 0){
-            alert("NO!!")
-            return false;
-        }
-    }  
-    </script>
+
+			})
+
+		})
+		</script>
+
+
+//    <script type="text/javascript">
+  //  function checkForm(){
+    //	var a = document.getElementById("fullname")
+    //var b = document.getElementById("streetaddr")
+    //	if (a.value.length == 0)
+    	//	{
+        //        document.getElementById("nameerrormsg").style.display = "block"; a = 0;}
+//    	   else {
+  //              document.getElementById("nameerrormsg").style.display = "none";}
+
+//    	if (b.value.length == 0)
+  //  		{document.getElementById("addrerrormsg").style.display = "block"; b = 0}
+    //	else {document.getElementById("addrerrormsg").style.display = "none"; }
+
+      //  if (b == 0 || a == 0){
+        //    alert("NO!!")
+          //  return false;
+      //  }
+    //}
+    //</script>
 </head>
 <body>
     <h1>Challenge 4</h1>
-	<form action="challenge5.html" onsubmit="return checkForm();">
+	<form action="challenge5.html" >
         <fieldset>
         <legend>Personal details</legend>
           <label for="fullname">Full name: </label>
-            <input type="text" name="fullname" id="fullname"><br/>
-       
+            <input type="text" name="fullname" id="fullname">
             <p class="errormsg" id="nameerrormsg">Please enter your name above!</p>
-
+						<br>
           <label for ="streetaddr"></label>
             Street Address:
             <input type="text" name="streetaddr" id="streetaddr">
-       
             <p class="errormsg" id="addrerrormsg">Please enter your street address!</p>
         </fieldset>
-        <input type="submit" value="Submit it!"> 
+        <input type="submit" value="Submit it!">
     </form>
 </body>
 </html>
